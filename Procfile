@@ -1,1 +1,1 @@
-web: gunicorn django-spiffy-blog.wsgi
+web: gunicorn codestar2021.wsgi
