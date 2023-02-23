@@ -90,17 +90,17 @@ WSGI_APPLICATION = 'codestar2021.wsgi.application'
 
 DEBUG = 'DEVELOPMENT' in os.environ
 
-if DEBUG:
-    DATABASES = {
-        'default': {
-            'ENGINE': 'django.db.backends.sqlite3',
-            'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
-        }
-    }
-else:
-    DATABASES = {
-        'default':
-        dj_database_url.parse(os.environ.get("DATABASE_url"))
+# if DEBUG:
+#     DATABASES = {
+#         'default': {
+#             'ENGINE': 'django.db.backends.sqlite3',
+#             'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+#         }
+#     }
+# else:
+DATABASES = {
+    'default':
+    dj_database_url.parse(os.environ.get("DATABASE_URL"))
 }
 
 
