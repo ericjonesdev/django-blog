@@ -33,7 +33,9 @@ TEMPLATES_DIR = os.path.join(BASE_DIR, 'templates')
 SECRET_KEY = os.environ.get('SECRET_KEY')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
+
+X_FRAME_OPTIONS = 'SAMEORIGIN'
 
 ALLOWED_HOSTS = ['django-spiffy-blog.herokuapp.com', 'localhost']
 
@@ -114,7 +116,6 @@ WSGI_APPLICATION = 'codestar2021.wsgi.application'
 #     }
 # }
 
-#DEBUG = 'DEVELOPMENT' in os.environ
 
 # if DEBUG:
 #     DATABASES = {
